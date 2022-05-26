@@ -1,7 +1,12 @@
 package cn.dl.studio.kahn;
 
+import cn.dl.studio.kahn.genericity.cls.Animal;
+import cn.dl.studio.kahn.genericity.cls.Bird;
+import cn.dl.studio.kahn.genericity.cls.Dog;
+import cn.dl.studio.kahn.genericity.genericitycls.GenA;
 import cn.dl.studio.kahn.stream.StreamDemo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,8 +19,16 @@ public class App {
 
         // loopDemo();
 
-        StreamDemo streamDemo = new StreamDemo();
-        streamDemo.getStrByLen(4);
+        // StreamDemo streamDemo = new StreamDemo();
+        // streamDemo.getStrByLen(4);
+
+        GenA genA = new GenA();
+
+        List<Animal> lst = new ArrayList<>();
+
+        lst.add(new Dog());
+        lst.add(new Bird());
+        System.out.println(genA.countLegs(lst));
     }
 
     private static void loopDemo() {
